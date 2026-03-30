@@ -7,7 +7,7 @@ Media Service manages file uploads and media metadata.
 - Port: `3006`
 - Base URL: `http://localhost:3006`
 - Base Route: `/api/v1/media`
-- Swagger UI: `http://localhost:3006/api-docs`
+- Swagger UI: `http://localhost:3006/api/v1/api-docs`
 
 ## Environment Variables
 

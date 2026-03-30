@@ -39,7 +39,7 @@ The gateway validates JWT tokens and proxies requests to downstream services.
 | Category Service     | 3003 | `/api/v1/categories`    | `http://localhost:3003/api/v1/api-docs` |
 | Comment Service      | 3004 | `/api/v1/comments`      | `http://localhost:3004/api/v1/api-docs` |
 | Subscription Service | 3005 | `/api/v1/subscriptions` | `http://localhost:3005/api/v1/api-docs` |
-| Media Service        | 3006 | `/api/v1/media`         | `http://localhost:3006/api-docs`        |
+| Media Service        | 3006 | `/api/v1/media`         | `http://localhost:3006/api/v1/api-docs` |
 
 ## Prerequisites
 
@@ -154,7 +154,7 @@ Swagger is available per service and at gateway.
 - Category docs: `GET http://localhost:3003/api/v1/api-docs`
 - Comment docs: `GET http://localhost:3004/api/v1/api-docs`
 - Subscription docs: `GET http://localhost:3005/api/v1/api-docs`
-- Media docs: `GET http://localhost:3006/api-docs`
+- Media docs: `GET http://localhost:3006/api/v1/api-docs`
 
 ## Gateway API Surface
 
