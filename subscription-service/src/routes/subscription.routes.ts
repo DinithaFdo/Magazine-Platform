@@ -43,6 +43,7 @@ const router = express.Router();
  *               user_id:
  *                 type: string
  *                 format: uuid
+ *                 example: 55555555-5555-4555-8555-555555555555
  *               plan:
  *                 type: string
  *                 enum: [free, standard, premium]
@@ -157,6 +158,7 @@ router.get(
  *               user_id:
  *                 type: string
  *                 format: uuid
+ *                 example: 55555555-5555-4555-8555-555555555555
  *               plan:
  *                 type: string
  *                 enum: [free, standard, premium]

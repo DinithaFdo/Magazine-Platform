@@ -48,10 +48,12 @@ const router = express.Router();
  *                 example: This article explains the basics of AI...
  *               author_id:
  *                 type: string
- *                 example: uuid
+ *                 format: uuid
+ *                 example: 22222222-2222-4222-8222-222222222222
  *               category_id:
  *                 type: string
- *                 example: uuid
+ *                 format: uuid
+ *                 example: 33333333-3333-4333-8333-333333333333
  *               tags:
  *                 type: array
  *                 items:
@@ -154,6 +156,42 @@ router.get(
  *         description: Article UUID
  *         schema:
  *           type: string
+ *           format: uuid
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             minProperties: 1
+ *             properties:
+ *               title:
+ *                 type: string
+ *                 example: Updated AI Trends in 2026
+ *               content:
+ *                 type: string
+ *                 example: Updated article body with new references and insights.
+ *               author_id:
+ *                 type: string
+ *                 format: uuid
+ *                 example: 22222222-2222-4222-8222-222222222222
+ *               category_id:
+ *                 type: string
+ *                 format: uuid
+ *                 example: 33333333-3333-4333-8333-333333333333
+ *               tags:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                 example: ["AI", "Research"]
+ *               status:
+ *                 type: string
+ *                 enum: [draft, published]
+ *                 example: published
+ *               thumbnail_url:
+ *                 type: string
+ *                 format: uri
+ *                 example: https://example.com/updated-image.jpg
  *     responses:
  *       200:
  *         description: Article updated successfully

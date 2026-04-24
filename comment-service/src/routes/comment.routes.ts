@@ -43,10 +43,12 @@ const router = express.Router();
  *             properties:
  *               article_id:
  *                 type: string
- *                 example: uuid
+ *                 format: uuid
+ *                 example: 44444444-4444-4444-8444-444444444444
  *               user_id:
  *                 type: string
- *                 example: uuid
+ *                 format: uuid
+ *                 example: 11111111-1111-4111-8111-111111111111
  *               content:
  *                 type: string
  *                 example: This is a very informative article!

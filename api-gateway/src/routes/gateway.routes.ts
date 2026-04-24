@@ -61,7 +61,7 @@ const buildServiceProxy = (target: string, serviceBasePath: string) =>
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/UserRequest'
+ *             $ref: '#/components/schemas/UserUpdateRequest'
  *     responses:
  *       201:
  *         description: User created successfully
@@ -202,7 +202,7 @@ router.use("/users", buildServiceProxy(userServiceUrl, "/api/v1/users"));
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/ArticleRequest'
+ *             $ref: '#/components/schemas/ArticleUpdateRequest'
  *     responses:
  *       201:
  *         description: Article created successfully
@@ -321,7 +321,7 @@ router.use(
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/CategoryRequest'
+ *             $ref: '#/components/schemas/CategoryUpdateRequest'
  *     responses:
  *       201:
  *         description: Category created successfully
@@ -539,7 +539,7 @@ router.use(
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/SubscriptionRequest'
+ *             $ref: '#/components/schemas/SubscriptionUpdateRequest'
  *     responses:
  *       201:
  *         description: Subscription created successfully

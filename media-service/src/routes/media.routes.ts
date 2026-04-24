@@ -65,6 +65,7 @@ const upload = multer({
  *               uploaded_by:
  *                 type: string
  *                 format: uuid
+ *                 example: 11111111-1111-4111-8111-111111111111
  *     responses:
  *       201:
  *         description: Media uploaded successfully
@@ -172,6 +173,7 @@ router.get(
  *               uploaded_by:
  *                 type: string
  *                 format: uuid
+ *                 example: 11111111-1111-4111-8111-111111111111
  *               url:
  *                 type: string
  *                 format: uri

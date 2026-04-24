@@ -125,6 +125,33 @@ router.get("/:id", validateParams(userIdParamsSchema), controller.getUserById);
  *         description: User UUID
  *         schema:
  *           type: string
+ *           format: uuid
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             minProperties: 1
+ *             properties:
+ *               name:
+ *                 type: string
+ *                 example: Jane Doe
+ *               email:
+ *                 type: string
+ *                 format: email
+ *                 example: jane@example.com
+ *               bio:
+ *                 type: string
+ *                 example: Product designer and writer
+ *               country:
+ *                 type: string
+ *                 example: Sri Lanka
+ *               preferred_categories:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                 example: ["Design", "Business"]
  *     responses:
  *       200:
  *         description: User updated successfully
@@ -177,16 +204,20 @@ router.delete(
  *         description: User to follow
  *         schema:
  *           type: string
+ *           format: uuid
  *     requestBody:
  *       required: true
  *       content:
  *         application/json:
  *           schema:
  *             type: object
+ *             required:
+ *               - follower_id
  *             properties:
  *               follower_id:
  *                 type: string
- *                 example: uuid
+ *                 format: uuid
+ *                 example: 11111111-1111-4111-8111-111111111111
  *     responses:
  *       200:
  *         description: User followed successfully
@@ -214,16 +245,20 @@ router.post(
  *         description: User to unfollow
  *         schema:
  *           type: string
+ *           format: uuid
  *     requestBody:
  *       required: true
  *       content:
  *         application/json:
  *           schema:
  *             type: object
+ *             required:
+ *               - follower_id
  *             properties:
  *               follower_id:
  *                 type: string
- *                 example: uuid
+ *                 format: uuid
+ *                 example: 11111111-1111-4111-8111-111111111111
  *     responses:
  *       200:
  *         description: User unfollowed successfully
