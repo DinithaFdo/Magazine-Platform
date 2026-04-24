@@ -1,5 +1,5 @@
 import express from "express";
-import { createProxyMiddleware } from "http-proxy-middleware";
+import { createProxyMiddleware, fixRequestBody } from "http-proxy-middleware";
 
 const router = express.Router();
 
@@ -20,6 +20,10 @@ const buildServiceProxy = (target: string, serviceBasePath: string) =>
     target,
     changeOrigin: true,
     pathRewrite: (path) => `${serviceBasePath}${path === "/" ? "" : path}`,
+    on: {
+      // Re-stream parsed bodies so proxied write operations do not hang.
+      proxyReq: fixRequestBody,
+    },
   });
 
 /**
