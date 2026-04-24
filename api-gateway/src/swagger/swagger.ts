@@ -331,7 +331,11 @@ const options = {
           properties: {
             file_name: { type: "string", maxLength: 255, example: "image.png" },
             file_type: { type: "string", maxLength: 100, example: "image/png" },
-            file_size: { type: "number", exclusiveMinimum: 0, example: 1048576 },
+            file_size: {
+              type: "number",
+              exclusiveMinimum: 0,
+              example: 1048576,
+            },
             uploaded_by: {
               type: "string",
               format: "uuid",
